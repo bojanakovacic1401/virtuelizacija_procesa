@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EVCharging.Client/EVCharging.Client.csproj" Id="c3243018-4c2a-4c46-aabf-d434bd0cfc7b" />
+  <Project Path="EVCharging.Server/EVCharging.Server.csproj" Id="d62eb27c-d4ba-445d-a70c-40d93f0be7c0" />
+  <Project Path="EVCharging.Shared/EVCharging.Shared.csproj" Id="785f3402-e86b-4fc6-8ebc-bf1d5ef5b403" />
+</Solution>
