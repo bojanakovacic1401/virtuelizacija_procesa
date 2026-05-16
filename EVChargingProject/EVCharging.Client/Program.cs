@@ -173,15 +173,25 @@ namespace EVCharging.Client
                                     client.PushSample(sample);
                                     sent++;
 
-                                    if (sent == 1 || sent % 25 == 0)
+                                    if (sent % 25 == 0)
                                     {
-                                        Console.WriteLine("Poslato redova: {0}", sent);
+                                        Console.WriteLine("Poslato redova: " + sent);
                                     }
                                 }
-                                catch (FaultException<ValidationFault> fault)
+                                catch (FaultException ex)
                                 {
-                                    serverRejected++;
-                                    logger.Warn("Server odbio red: " + fault.Detail);
+                                    Console.WriteLine("[ODBIJEN RED] " + sample.RowIndex + " | " + ex.Message);
+                                    
+                                }
+                                catch (CommunicationException ex)
+                                {
+                                    Console.WriteLine("[GRESKA KOMUNIKACIJE] Red " + sample.RowIndex + " | " + ex.Message);
+                                    throw;
+                                }
+                                catch (TimeoutException ex)
+                                {
+                                    Console.WriteLine("[TIMEOUT] Red " + sample.RowIndex + " | " + ex.Message);
+                                    throw;
                                 }
                             }
 
