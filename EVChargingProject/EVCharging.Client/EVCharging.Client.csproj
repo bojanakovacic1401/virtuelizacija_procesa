@@ -53,6 +53,7 @@
     <Compile Include="Logging\ClientLogger.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Parsing\ChargingSampleParser.cs" />
     <Compile Include="Parsing\CsvLineSplitter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
