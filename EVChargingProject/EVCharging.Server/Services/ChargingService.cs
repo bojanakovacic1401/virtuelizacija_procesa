@@ -12,7 +12,7 @@ using EVCharging.Shared.Models;
 
 namespace EVCharging.Server.Services
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class ChargingService : IChargingService, IDisposable
     {
         private readonly ServerSettings _settings;

@@ -3,7 +3,7 @@ using EVCharging.Shared.Models;
 
 namespace EVCharging.Shared.Contracts
 {
-    [ServiceContract(SessionMode = SessionMode.Required, Namespace = "urn:evcharging")]
+    [ServiceContract(SessionMode = SessionMode.Allowed, Namespace = "urn:evcharging")]
     public interface IChargingService
     {
         [OperationContract]
