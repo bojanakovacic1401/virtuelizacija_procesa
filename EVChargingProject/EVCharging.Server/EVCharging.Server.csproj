@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analytics\AnalyticsEngine.cs" />
+    <Compile Include="Config\ServerSettings.cs" />
+    <Compile Include="Events\ChargingEvents.cs" />
+    <Compile Include="Infrastructure\FileSessionWriter.cs" />
+    <Compile Include="Infrastructure\PathSanitizer.cs" />
+    <Compile Include="Infrastructure\ServerFileWatcher.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ChargingService.cs" />
+    <Compile Include="Validation\SampleValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\EVCharging.Server.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\EVCharging.Server.csproj.AssemblyReference.cache" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EVCharging.Shared\EVCharging.Shared.csproj">
       <Project>{785f3402-e86b-4fc6-8ebc-bf1d5ef5b403}</Project>
       <Name>EVCharging.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
